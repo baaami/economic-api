@@ -35,7 +35,7 @@ export class Context extends CommonEntity {
   likes: Like[];
 
   @ManyToOne(() => Stock, (stock) => stock.contexts)
-  @JoinColumn({ name: 'stock_id', referencedColumnName: 'stockId' })
+  @JoinColumn({ name: 'stock_symbol', referencedColumnName: 'stockSymbol' })
   stock: Stock;
 
   @ManyToOne(() => User, (user) => user.contexts)
